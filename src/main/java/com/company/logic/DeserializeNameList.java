@@ -7,7 +7,7 @@ public class DeserializeNameList {
         super();
     }
     public DeserializeNameList(String firstname, String lastname) {
-        super();
+
         this.firstname = firstname;
         this.lastname = lastname;
     }

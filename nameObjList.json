@@ -1,18 +1,1 @@
-[
-    {
-      "firstname": "Morten",
-      "lastname": "Neteland"
-    },
-    {
-      "firstname": "Thomas",
-      "lastname": "Lien"
-    },
-    {
-      "firstname": "Anders",
-      "lastname": "Dahl"
-    },
-    {
-      "firstname": "Anders",
-      "lastname": "Dah"
-    }
-]
+[{"firstname":"Morten","lastname":"Neteland"},{"firstname":"Thomas","lastname":"Lien"},{"firstname":"Anders","lastname":"Dahl"},{"firstname":"Anders","lastname":"Dahdsadsadas"},{"firstname":"Berit","lastname":"Dahdsadsadas"},{"firstname":"Oru","lastname":"Dino"},{"firstname":"dinas","lastname":"dina"},{"firstname":"dasdas","lastname":"sdas"},{"firstname":"hoppsann","lastname":"heisann"},{"firstname":"ifdjfe","lastname":"dwad"}]

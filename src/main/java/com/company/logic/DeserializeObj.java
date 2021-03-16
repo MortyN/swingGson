@@ -3,9 +3,7 @@ package com.company.logic;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,20 +13,31 @@ public class DeserializeObj {
 
     public static List<DeserializeNameList> getNamelist(String file) {
 
-//        List<DeserializeNameList> nameListArr = new ArrayList<>();
-        List<DeserializeNameList> deslist = null;
+        List<DeserializeNameList> result = null;
         String wDir = System.getProperty("user.dir");
 
 
         try (Reader reader = new FileReader(wDir + "/" + file)){
             Type nameListType = new TypeToken<ArrayList<DeserializeNameList>>(){}.getType();
-            deslist = new Gson().fromJson(reader, nameListType);
+            result = new Gson().fromJson(reader, nameListType);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return deslist;
+        return result;
+    }
+
+    public static void setNamelist(List<DeserializeNameList> namelist) throws IOException {
+        String wDir = System.getProperty("user.dir");
+
+        String json = new Gson().toJson(namelist);
+
+        try(Writer writer = new FileWriter(wDir + "/" + "nameObjList.json")){
+            new Gson().toJson(namelist, writer);
+            System.out.println("wrote to file");
+        }
+
     }
 
     public static void main(String[] args) {
